@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  
+  }
+  body{
+    background: #343333;
+  } 
+  .wrpper .header{
+    z-index: 1;
+    background: #b7f707;
+    position: fixed;
+    width:100%;
+    height: 70px;
+    display: flex;
+    top: 0;
+  }
+   .header-menu{
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0,20px;
+  }
+  .header-menu .titel{
+    color: #fff;
+    font-size: 25px;
+    text-decoration: uppercase;
+    font-weight: 900;
+  }
+  .header-menu .titel span{
+      color: rgb(19, 148, 203);
+  }
+  .header-menu .sidebar-btn{
+    color: #fff;
+    position: absolute;
+    margin-left: 240px;
+    font-size: 22px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: color;
+  }
+  .header-menu .sidebar-btn:hover{
+    color:rgb(19, 148, 203);
+  } 
+   .header .header-menu ul{
+    display: flex;
+  }
+  .header-menu ul li a{
+    background:#fff;
+    color: #000;
+    display: block;
+    margin: 0 10px;
+    font-size: 20px;
+    width: 34px;
+    height: 34px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    transition-property: background,color;
+  }
+  .header-menu ul li a:hover{
+    background: #4ccEEb;
+    color: #fff;
+  }
+  .sidebar{
+    z-index: 1;
+    background: #2F3234;
+    position: fixed;
+    top: 70px;
+    width: 250px;
+    height: 580px;
+    transition: 0.3s;
+    transition-property: width;
+    overflow-y: auto;
+  }
+  .sidebar .sidebar-menu{
+    overflow: hidden;
+  }
+  .sidebar-menu img{
+    margin: 20px 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .sidebar-menu p{
+    color: #bbb;
+    font-weight: 700;
+    margin-bottom: 10px;
+  
+  }
+  .sidebar-menu .item{
+    width: 250px;
+    overflow: hidden;
+  }
+  .item .menu-btn{
+    display: block;
+    color: #fff;
+    position: relative;
+    padding: 25px 20px;
+    transition: 0.3s;
+    transition-property: color;
+  }
+  .item .menu-btn:hover{
+    color: #4ccEEb;
+  
+  }
+  .item .menu-btn i{
+    margin-right: 20px;
+  
+  }
+  .item .menu-btn .drop-down{
+    float: right;
+    font-size: 15px;
+    margin-top: 3px;
+  }
+  .item .sub-menu{
+    background: #3498D3;
+    overflow: hidden;
+    max-height: 0;
+    transition: o.3s;
+    transition-property: background  max-heigh ;
+  
+  }
+  .item .sub-menu a{
+    display: block;
+    position: relative;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 15px;
+    padding: 20px;
+    border-bottom: 1px solid #8FC5E9;
+    transition: 0.3s;
+    transition-property: background;
+  }
+  .item .sub-menu a:hover{
+    background: #7daccb;
+  }
+  .item .sub-menu i{
+    padding-right: 20px;
+    font-size: 10px;
+  }
+  .item:target .sub-menu{
+    max-height: 500px;
+  }
+  /* main container */
+  .main-container{
+    width: (100%-250px);
+    border: 3px solid black;
+    height: 100vh;
+    margin-top: 70px;
+    margin-left: 250px;
+    padding: 15px;
+    background: #bbb;
+    background-size: cover;
+    transition: 0.3s;
+  }
+  .collapse .sidebar{
+    width: 70px;
+  }
+  .collapse .sidebar .profile img,
+  .collapse .sidebar .profile p,
+  .collapse .sidebar a span{
+    display: none;
+  }
+  .collapse .sidebar .sidebar-menu .item .menu-btn{
+    font-size: 25px;
+  }
+  .collapse .sidebar .sidebar-menu .item .sub-menu i{
+    font-size: 18px;
+    padding: 3px;
+  }
+  .collapse .main-container{
+    width: (100%-70px);
+    margin-left: 70px;
+  }
+  /* main  c0ntainer  css start here */
+  .cards{
+    width: 100%;
+    padding: 35px 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid: gap 20px;
+    cursor: progress;
+  }
+  .cards .card:hover{
+    background-color: darkgreen;
+    color:white
+  }
+  .cards .card{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+    margin: 10px;
+  }
+  .number {
+    font-size: 35px;
+    font-weight: 500;
+    color: #80ab07;
+  }
+  .card-name{
+    color: #888;
+    font-weight: 600;
+  }
+  .icon-box i{
+     font-size: 45px;
+     color: #80ab07;
+  }
+  /* chart starts here */
+  .charts{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+  }
+  .chart{
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+    width: 100%;
+  }
+  .chart h2{
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #666;
+    text-align: center;
+  }
+  .chart-type{
+      text-align: center;
+      font-size: 20px;
+      color: #666;
+  }
+  #doughnut-chart img{
+    padding-left: 30px;
+    padding-top: 10px;
+  }
+  /* Responsive starts  here*/
+  @media screen and (min-width:992px) and (max-width:1200px) {
+    .sidebar {
+    width: 70px;
+    }
+    .main-container{
+      left: 70px;
+      width: calc(100%-70px);
+    }
+  }
+  @media screen and (miv-width:768px) and  (max-width:992px){
+    cards{
+      grid-template-columns: repeat(2,1fr);
+      
+    }
+    .charts{
+      grid-template-columns: 1fr;
+  
+    }
+    .doughnut-chart{
+      padding: 50px;
+    }
+    #doughnut{
+      padding: 50px;
+    }
+  }
+  @media screen and (miv-width:600) and  (max-width:768px){
+    
+  }
+   
+
